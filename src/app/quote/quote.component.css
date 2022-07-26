@@ -1,21 +1,39 @@
+blockquote{
+    font-size: 23px;
+    transition:all var(--transtion-speed);
+}
+span{
+    transition: color var(--transtion-speed);
+}
+
+
 .quoteBlock{
     border: 1px solid rgb(231, 231, 231);
     text-align: center;
     border-radius: 2%;
     margin-top: 6%;
+    background-color: #eee;
 }
 a{
     display: block;
     border: none;
-    background-color: rgba(38, 38, 38 , 1);
-    color:#eee;
+    background-color: var(--main-color) !important;
+    color:#eee !important;
     padding-top: 8px;
     padding-bottom: 8px;
+    
+    transition: opacity 0.5s;
+    transition:background-color 2s;
 }
 
 a:hover{
-    background-color: rgba(38, 38, 38 , 0.8);
+    background-color: var(--main-color);
     color:#eee;
+    opacity: 0.8;
+}
+
+a:active{
+    background-color: var(--main-color);
 }
 
 .social-icon{
@@ -23,6 +41,37 @@ a:hover{
     
 }
 
-blockquote{
-    font-size: 23px;
+@media only screen and (max-width: 600px) {
+    .quoteBlock{
+        width: 100% !important;
+    }
+    .social-icon{
+        width: 100%;
+        flex-grow: 1;
+    }
+    .icon-container{
+        flex-direction: column !important;
+    }
+
+    .icon-container>div{
+        width: 100% !important;
+        flex-direction: column !important;
+    }
+    .icon-container>div>a{
+        margin-top: 2px;
+        margin-left:0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .quoteBlock{
+        width: 100% !important;
+    }
+    .btn-newQuote{
+        width: 100%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding: 12px 30px;
+    }
 }

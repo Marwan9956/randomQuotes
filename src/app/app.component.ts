@@ -8,4 +8,7 @@ import { QuoteComponent } from './quote/quote.component';
 })
 export class AppComponent {
   title = 'randomQuote';
+  quoteChange(event:any) : void{
+    //console.log("Hi we get the call body");
+  }
 }
